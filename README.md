@@ -1,5 +1,19 @@
-# GFT skills test
-I see that I was tasked with building simple lodash-like library
-Given function signatures and descriptions I suppose this was the source of inspiration :)
-I structured the code as one package with separate exports for brevity.
-Included are my standard jscs and jshint presets and gruntfile for running tests and coverage.
+# Utility demo
+
+Simple demo based on my scaffolding project to show my coding practices.
+
+Few things that are worth noting:
+1. I use both jscs and jshint for code styles/hinting - my own preference
+2. I write 100% covered code. Coverage is calculated using `istanbul`
+3. Grunt is used only for running tests, coverage and code style checks.
+
+To run tests:
+
+    grunt mochaTest
+or coverage:
+
+    grunt mocha_istanbul
+
+To run all the checks, just type:
+
+    grunt
