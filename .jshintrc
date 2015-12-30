@@ -1,0 +1,8 @@
+{
+  "node": true,
+  "mocha": true,
+  "curly": true,
+  "globals": {
+    "expect": true
+  }
+}
