@@ -1,14 +1,19 @@
 {
   "name": "util-demo",
-  "description": "Utility demo",
+  "description": "Utility demo for showing coding practices and skills",
   "version": "0.1.0",
   "author": {
     "name": "Bartosz Polanczyk",
     "email": "bartosz.polanczyk@gmail.com"
   },
+  "license": "MIT",
   "main": "index",
   "engines": {
     "node": ">= 4.0.0"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/SzybkiSasza/util-demo"
   },
   "devDependencies": {
     "chai": "^3.3.0",
