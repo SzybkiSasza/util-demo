@@ -152,11 +152,43 @@ describe('Collections utility functions tests', function() {
   });
 
   describe('"Unique" function tests', function() {
+    it('Should return empty array if first argument is not array-like',
+    function() {
+      expect(Collections.unique()).to.deep.equal([]);
+      expect(Collections.unique(4)).to.deep.equal([]);
+    });
 
+    it('Should return unique array if iteratee was not provided', function() {
+      expect(Collections.unique([1, 1, 2, 3, 4.5, 4.5, 7]))
+        .to.deep.equal([1, 2, 3, 4.5, 7]);
+    });
+
+    it('Should return unique array of mapped values if iteratee is provided',
+    function() {
+      var iteratee = function(value) {
+        return Math.floor(value);
+      };
+      expect(Collections.unique([1,1.5,1.7,1.8,2], iteratee))
+        .to.deep.equal([1,2]);
+    });
   });
 
   describe('"Add" function tests', function() {
+    it('Should return empty array if nothing is provided to function',
+    function() {
+      expect(Collections.add()).to.deep.equal([]);
+    });
 
+    it('Should return iterable as array if nothing was provided for adding',
+    function() {
+      expect(Collections.add([1, 2, 3])).to.deep.equal([1, 2, 3]);
+    });
+
+    it('Should return resulting array if provided with arguments',
+    function() {
+      expect(Collections.add([1, 2, 3], 4, 6, 5))
+        .to.deep.equal([1, 2, 3, 4, 6, 5]);
+    });
   });
 
 });
