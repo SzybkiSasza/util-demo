@@ -8,7 +8,7 @@ var Collections = require('../lib/collections');
  *  each test would be pain in the ass. However, I tested it completely to make
  *  sure it behaves exactly as I want. */
 
-describe('Collections utility functions tests', function() {
+describe('Collections utility module tests', function() {
   it('Is defined object', function() {
     expect(Collections).to.be.an('object');
   });
